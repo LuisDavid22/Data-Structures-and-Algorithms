@@ -18,40 +18,34 @@ namespace DataStructuresAndAlgorithms.Data_Structures
         {
             if(count >= array.Length)
             {
-                System.Array.Resize(ref array, array.Length + 1);
+                System.Array.Resize(ref array, count * 2);
             }
-            array[count] = element;
-            count++;
+            array[count++] = element;
+
         }
 
         public void removeAt(int index)
         {
-            if (index >= array.Length)
-                return;
+            if (index < 0 || index >= count)
+                throw new ArgumentOutOfRangeException();
 
-            //if (index == array.Length - 1)
-            //{
-            //    array[index] = 0;
-            //}
-            //else
-            //{
-            //    for (int i = index - 1; i < array.Length -1; i++)
-            //    {
-            //        array[i] = array[i + 1];
-            //    }
-            //}
-
-            array = array.Where((s, i) => i != index).ToArray();
-              
+            for (int i = index ; i < count; i++)
+            {
+                array[i] = array[i + 1];
+            }
+            count--;
         }
         public void print()
         {
-            Console.WriteLine(string.Join("\n", array));
+            for (int i = 0; i < count; i++)
+            {
+                Console.WriteLine(array[i]);
+            }
         }
 
         public int indexOf(int element)
         {
-            for (int i = 0; i <= array.Length-1; i++)
+            for (int i = 0; i <= count - 1; i++)
             {
                 if (array[i] == element)
                     return i;
