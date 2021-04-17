@@ -1,0 +1,13 @@
+C:\Users\e1008184\source\repos\DataStructuresAndAlgorithms\DataStructuresAndAlgorithms\bin\Debug\netcoreapp3.1\DataStructuresAndAlgorithms.exe
+C:\Users\e1008184\source\repos\DataStructuresAndAlgorithms\DataStructuresAndAlgorithms\bin\Debug\netcoreapp3.1\DataStructuresAndAlgorithms.deps.json
+C:\Users\e1008184\source\repos\DataStructuresAndAlgorithms\DataStructuresAndAlgorithms\bin\Debug\netcoreapp3.1\DataStructuresAndAlgorithms.runtimeconfig.json
+C:\Users\e1008184\source\repos\DataStructuresAndAlgorithms\DataStructuresAndAlgorithms\bin\Debug\netcoreapp3.1\DataStructuresAndAlgorithms.runtimeconfig.dev.json
+C:\Users\e1008184\source\repos\DataStructuresAndAlgorithms\DataStructuresAndAlgorithms\bin\Debug\netcoreapp3.1\DataStructuresAndAlgorithms.dll
+C:\Users\e1008184\source\repos\DataStructuresAndAlgorithms\DataStructuresAndAlgorithms\bin\Debug\netcoreapp3.1\DataStructuresAndAlgorithms.pdb
+C:\Users\e1008184\source\repos\DataStructuresAndAlgorithms\DataStructuresAndAlgorithms\obj\Debug\netcoreapp3.1\DataStructuresAndAlgorithms.csprojAssemblyReference.cache
+C:\Users\e1008184\source\repos\DataStructuresAndAlgorithms\DataStructuresAndAlgorithms\obj\Debug\netcoreapp3.1\DataStructuresAndAlgorithms.AssemblyInfoInputs.cache
+C:\Users\e1008184\source\repos\DataStructuresAndAlgorithms\DataStructuresAndAlgorithms\obj\Debug\netcoreapp3.1\DataStructuresAndAlgorithms.AssemblyInfo.cs
+C:\Users\e1008184\source\repos\DataStructuresAndAlgorithms\DataStructuresAndAlgorithms\obj\Debug\netcoreapp3.1\DataStructuresAndAlgorithms.csproj.CoreCompileInputs.cache
+C:\Users\e1008184\source\repos\DataStructuresAndAlgorithms\DataStructuresAndAlgorithms\obj\Debug\netcoreapp3.1\DataStructuresAndAlgorithms.dll
+C:\Users\e1008184\source\repos\DataStructuresAndAlgorithms\DataStructuresAndAlgorithms\obj\Debug\netcoreapp3.1\DataStructuresAndAlgorithms.pdb
+C:\Users\e1008184\source\repos\DataStructuresAndAlgorithms\DataStructuresAndAlgorithms\obj\Debug\netcoreapp3.1\DataStructuresAndAlgorithms.genruntimeconfig.cache
