@@ -53,5 +53,58 @@ namespace DataStructuresAndAlgorithms.Data_Structures
 
             return -1;
         }
+
+        public int max()
+        {
+            int max = 0;
+            foreach (var item in array)
+            {
+                if (item > max)
+                    max = item;
+            }
+
+            return max;
+        }
+
+        public Array intersect(Array newArray)
+        {
+            Array result = new Array(count);
+
+            foreach (var item in array)
+            {
+                if (newArray.indexOf(item) >= 0)
+                    result.insert(item);
+            }
+
+            return result;
+        }
+        public int[] reverse()
+        {
+            int[] newArray = new int[count];
+
+            for (int i = 0; i < count; i++)
+            {
+                newArray[i] = array[count - i - 1];
+            }
+
+            return newArray;
+        }
+        public void insertAt(int item, int index)
+        {
+            if (index < 0 || index >= array.Length)
+                throw new ArgumentOutOfRangeException();
+
+            if (count == array.Length -1)
+                System.Array.Resize(ref array, count * 2);
+
+            for (int i = count-1; i > index; i--)
+            {
+                array[i] = array[i - 1];
+                //array[i + 1] = array[i];
+            }
+
+            array[index] = item;
+            count++;
+        }
     }
 }
