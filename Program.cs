@@ -22,7 +22,7 @@ namespace DataStructuresAndAlgorithms
 
             numbers.addLast(10);
 
-            numbers.deleteFirst();
+            //numbers.deleteFirst();
 
             numbers.deleteLast();
 
@@ -34,9 +34,17 @@ namespace DataStructuresAndAlgorithms
             Console.WriteLine(numbers.Size());
 
 
+            //Console.WriteLine(string.Join(',', numbers.toArray()));
+            //numbers.revert2();
             Console.WriteLine(string.Join(',', numbers.toArray()));
-            numbers.revert();
-            Console.WriteLine(string.Join(',', numbers.toArray()));
+
+            Console.WriteLine(numbers.getKthFromTheEnd(6));
+
+            numbers.printMiddle();
+
+            var list = Data_Structures.LinkedList.createWithLoop();
+
+            Console.WriteLine(list.hasLoop());
 
         }
         private static void testArray()

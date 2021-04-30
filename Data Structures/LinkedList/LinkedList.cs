@@ -178,5 +178,110 @@ namespace DataStructuresAndAlgorithms.Data_Structures
 
             last = current;
         }
+
+        public void revert2()
+        {
+            var previous = first;
+            var current = first.next;
+            
+            while(current != null)
+            {
+                var next = current.next;
+                current.next = previous;
+                previous = current;
+                current = next;
+            }
+
+            last = first;
+            last.next = null;
+            first = previous;
+        }
+
+        public int getKthFromTheEnd(int k)
+        {
+
+            if (isEmpty())
+                return 0;
+
+            if (k <= 0)
+                return 0;
+
+            if (k > size)
+                return 0;
+
+            var pointer1 = first;
+            var pointer2 = first;
+
+            for (int i = 1; i <= k - 1; i++)
+            {
+                pointer2 = pointer2.next;
+            }
+
+            while(pointer2.next != null)
+            {
+                pointer1 = pointer1.next;
+                pointer2 = pointer2.next;
+            }
+
+            return pointer1.value;
+        }
+
+        public void printMiddle()
+        {
+            var a = first;
+            var b = first;
+
+           while(b != last && b.next != last)
+            {
+                b = b.next.next;
+                a = a.next;
+            }
+
+            if (b == last)
+                Console.WriteLine(a.value);
+            else
+            {
+                Console.WriteLine($"{a.value}, {a.next.value}");
+            }
+        }
+
+        public bool hasLoop()
+        {
+            var slow = first;
+            var fast = first;
+
+            while (fast != null && fast.next != null)
+            {
+                slow = slow.next;
+                fast = fast.next.next;
+
+                if (slow == fast)
+                    return true;
+            }
+
+            return false;
+        }
+
+        public static LinkedList createWithLoop()
+        {
+            var list = new LinkedList();
+            list.addLast(10);
+            list.addLast(20);
+            list.addLast(30);
+            list.addLast(40);
+            list.addLast(50);
+
+            // Get a reference to 30
+            var node = list.first;
+
+            list.addLast(60);
+            list.addLast(70);
+
+
+            // Create the loop
+            list.last.next = node;
+
+            return list;
+        }
     }
 }
