@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataStructuresAndAlgorithms.Data_Structures;
+using System;
 using System.Collections.Generic;
 
 namespace DataStructuresAndAlgorithms
@@ -7,8 +8,49 @@ namespace DataStructuresAndAlgorithms
     {
         static void Main(string[] args)
         {
+            Data_Structures.TwoStacks stack = new Data_Structures.TwoStacks();
+
+            stack.push1(1);
+            stack.push1(2);
+            stack.push1(3);
+            stack.push1(4);
+            stack.push1(5);
+
+
+            stack.push2(10);
+            stack.push2(20);
+            stack.push2(30);
+            stack.push2(40);
+            stack.push2(50);
+            //testStack();
             //testArray();
-            testLinkedList();
+            //testLinkedList();
+        }
+        private static void testStack()
+        {
+            Data_Structures.Stack stack = new Data_Structures.Stack();
+            stack.push(1);
+            stack.push(2);
+            stack.push(3);
+            stack.push(4);
+            stack.push(5);
+
+      
+
+            while (!stack.isEmpty())
+            {
+                var last = stack.pop();
+                Console.WriteLine(last);
+            }
+
+
+            //string str = "abcde";
+            //StringReverser reverser = new StringReverser();
+
+            ////Console.WriteLine(reverser.reverse(null));
+
+            //var result = reverser.isBalanced("((klk))");
+            //Console.WriteLine(result);
         }
         private static void testLinkedList()
         {
