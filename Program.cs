@@ -8,27 +8,114 @@ namespace DataStructuresAndAlgorithms
     {
         static void Main(string[] args)
         {
-            Data_Structures.TwoStacks stack = new Data_Structures.TwoStacks();
-
-            stack.push1(1);
-            stack.push1(2);
-            stack.push1(3);
-            stack.push1(4);
-            stack.push1(5);
-
-
-            stack.push2(10);
-            stack.push2(20);
-            stack.push2(30);
-            stack.push2(40);
-            stack.push2(50);
+            //var queue = new Queue<int>();
+            //queue.Enqueue(1);
+            //queue.Enqueue(2);
+            //queue.Enqueue(3);
+            //queue.Enqueue(4);
+            //queue.Enqueue(5);
+            //reverse(queue);
             //testStack();
             //testArray();
             //testLinkedList();
+
+            //testArrayQueue();
+            //testStackQueue();
+            //testPriorityQueue();
+            testQueueReverser();
+
+        }
+        public static void testQueueReverser()
+        {
+            Queue<int> queue = new Queue<int>();
+            queue.Enqueue(1);
+            queue.Enqueue(2);
+            queue.Enqueue(3);
+            queue.Enqueue(4);
+            queue.Enqueue(5);
+
+            QueueReverser.reverse(5, queue);
+
+
+
+        }
+        public static void testPriorityQueue()
+        {
+            PriorityQueue queue = new PriorityQueue();
+
+            //queue.enqueue(1);
+            //queue.enqueue(3);
+            //queue.enqueue(5);
+            //queue.enqueue(2);
+            //queue.enqueue(4);
+
+                queue.add(5);
+                queue.add(3);
+
+            Console.WriteLine(queue.ToString());
+            Console.WriteLine(queue.dequeue());
+            Console.WriteLine(queue.peek());
+            Console.WriteLine(queue.ToString());
+        }
+        public static void testStackQueue()
+        {
+            StackQueue queue = new StackQueue();
+            queue.enqueue(1);
+            queue.enqueue(2);
+            queue.enqueue(3);
+            queue.enqueue(4);
+            queue.enqueue(5);
+
+            var peek = queue.peek();
+
+            Console.WriteLine(peek);
+            Console.WriteLine(queue.ToString());
+        }
+        public static void testArrayQueue()
+        {
+            ArrayQueue queue = new ArrayQueue();
+            queue.enqueue(1);
+            queue.enqueue(2);
+            queue.enqueue(3);
+            queue.enqueue(4);
+            queue.enqueue(5);
+
+            //queue.dequeue();
+            //queue.dequeue();
+            //queue.dequeue();
+
+            //for (int i = 0; i < 120; i++)
+            //{
+            //    queue.enqueue(5);
+            //}
+
+            Console.WriteLine(queue.ToString());
+
+            Console.WriteLine(queue.isEmpty());
+            Console.WriteLine(queue.isFull());
+
+        }
+        public static void reverse(Queue<int> queue)
+        {
+            Console.WriteLine(string.Join(",", queue.ToArray()));
+
+            Stack<int> stack = new Stack<int>();
+
+            while(queue.Count > 0)
+            {
+                stack.Push(queue.Dequeue());
+            }
+
+            while(stack.Count > 0)
+            {
+                queue.Enqueue(stack.Pop());
+            }
+
+            Console.WriteLine(string.Join(",", queue.ToArray()));
         }
         private static void testStack()
         {
-            Data_Structures.Stack stack = new Data_Structures.Stack();
+            Stack stack = new Stack();
             stack.push(1);
             stack.push(2);
             stack.push(3);
@@ -54,7 +141,7 @@ namespace DataStructuresAndAlgorithms
         }
         private static void testLinkedList()
         {
-            Data_Structures.LinkedList numbers = new Data_Structures.LinkedList();
+            LinkedList numbers = new LinkedList();
 
             numbers.addLast(1);
             numbers.addLast(2);
