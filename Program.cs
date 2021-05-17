@@ -22,8 +22,25 @@ namespace DataStructuresAndAlgorithms
             //testArrayQueue();
             //testStackQueue();
             //testPriorityQueue();
-            testQueueReverser();
+            //testQueueReverser();
 
+            //string text = "a green apple";
+            //CharFinder finder = new CharFinder();
+            //Console.WriteLine(finder.firstRepeatedCharacter(text));
+            testHashTable();
+        }
+        public static void testHashTable()
+        {
+            HashTable hashtable = new HashTable();
+
+            hashtable.put(1, "a");
+            hashtable.put(1, "d");
+            hashtable.put(2, "b");
+            hashtable.put(11, "c");
+        
+
+            Console.WriteLine(hashtable.get(2));
+            hashtable.remove(11);
         }
         public static void testQueueReverser()
         {
