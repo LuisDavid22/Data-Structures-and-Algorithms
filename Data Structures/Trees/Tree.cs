@@ -102,9 +102,9 @@ namespace DataStructuresAndAlgorithms.Data_Structures
 
             var current = Root;
 
-            while(current != null)
+            while (current != null)
             {
-                if(current.Value == value)
+                if (current.Value == value)
                 {
                     return true;
                 }
@@ -146,11 +146,62 @@ namespace DataStructuresAndAlgorithms.Data_Structures
             traversePostOrder(root.LeftChild);
             traversePostOrder(root.RightChild);
             Console.WriteLine(root.Value);
-            
+
 
 
         }
+        public bool equals(Tree tree)
+        {
+            if (tree == null)
+                return false; 
 
+            return equals(Root, tree.Root);
+
+        }
+        private bool equals(Node node1, Node node2)
+        {
+            if (node1 == null && node2 == null)
+                return true;
+
+            if (node1 == null || node2 == null)
+                return false;
+
+            var root = node1.Value == node2.Value;
+            var left = equals(node1.LeftChild, node2.LeftChild);
+            var right = equals(node1.RightChild, node2.RightChild);
+
+            if ((root && left && right))
+                return true;
+
+            return false;
+        }
+        public bool isValid()
+        {
+            swapRoot();
+           return isValid(Root, int.MinValue, int.MaxValue);
+        }
+        private bool isValid(Node node, int leftLimit, int rightLimit)
+        {
+            if (node == null)
+                return true;
+
+            var root = node.Value >= leftLimit && node.Value <= rightLimit;
+            var left = isValid(node.LeftChild, leftLimit, node.Value);
+            var right = isValid(node.RightChild, node.Value, rightLimit);
+
+            if ((root && left && right))
+                return true;
+
+            return false;
+        }
+        private void swapRoot()
+        {
+            var leftTemp = Root.LeftChild;
+
+            Root.LeftChild = Root.RightChild;
+
+            Root.RightChild = leftTemp;
+        }
         private bool isEmpty()
         {
             return Root == null;
