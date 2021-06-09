@@ -202,6 +202,103 @@ namespace DataStructuresAndAlgorithms.Data_Structures
 
             Root.RightChild = leftTemp;
         }
+        public List<int> GetNodesAtKth(int k)
+        {
+            var list = new List<int>();
+            GetNodesAtKth(Root, k,list);
+
+            return list;
+        }
+        private void GetNodesAtKth(Node node, int k, List<int> list)
+        {
+            if (node == null)
+                return;
+
+            if (k == 0)
+            {
+                list.Add(node.Value);
+                return;
+            }
+
+
+            GetNodesAtKth(node.LeftChild, k - 1,list);
+            GetNodesAtKth(node.RightChild, k - 1,list);
+        }
+        public int size()
+        {
+            return size(Root);
+        }
+        private int size(Node node)
+        {
+            if (node == null)
+                return 0;
+
+            return 1 + size(node.LeftChild) + size(node.RightChild);
+        }
+        public int countLeaves()
+        {
+            return countLeaves(Root);
+        }
+        private int countLeaves(Node node)
+        {
+            if (node == null)
+                return 0;
+
+            if (isLeaf(node))
+                return 1;
+
+            return countLeaves(node.LeftChild) + countLeaves(node.RightChild);
+        }
+        public int max()
+        {
+            return max(Root);
+        }
+        private int max(Node root)
+        {
+            if (isLeaf(root))
+                return root.Value;
+
+            var left = max(root.LeftChild);
+            var right = max(root.RightChild);
+
+            return Math.Max(Math.Max(left, right), root.Value);
+
+        }
+        public int min()
+        {
+            return min(Root);
+        }
+        private int min(Node root)
+        {
+            if (isLeaf(root))
+                return root.Value;
+
+            var left = min(root.LeftChild);
+            var right = min(root.RightChild);
+
+            return Math.Min(Math.Min(left, right), root.Value);
+        }
+        public bool contains(int value)
+        {
+            return contains(Root, value);
+        }
+        private bool contains(Node root, int value)
+        {
+            if (root == null)
+                return false;
+
+            if (root.Value == value)
+                return true;
+
+            var left = contains(root.LeftChild,value);
+            var right = contains(root.RightChild,value);
+
+            return left || right;
+        }
+        private bool isLeaf(Node node)
+        {
+            return node.LeftChild == null && node.RightChild == null;
+        }
         private bool isEmpty()
         {
             return Root == null;

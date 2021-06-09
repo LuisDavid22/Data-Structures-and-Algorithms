@@ -33,7 +33,7 @@ namespace DataStructuresAndAlgorithms
         public static void testTree()
         {
             Tree tree = new Tree();
-            Tree tree2 = new Tree();
+            //Tree tree2 = new Tree();
 
             tree.insert(7);
             tree.insert(4);
@@ -43,20 +43,28 @@ namespace DataStructuresAndAlgorithms
             tree.insert(8);
             tree.insert(10);
 
-            tree2.insert(7);
-            tree2.insert(4);
-            tree2.insert(9);
-            tree2.insert(1);
-            tree2.insert(6);
-            tree2.insert(8);
-            tree2.insert(10);
+
+            //tree2.insert(7);
+            //tree2.insert(4);
+            //tree2.insert(9);
+            //tree2.insert(1);
+            //tree2.insert(6);
+            //tree2.insert(8);
+            //tree2.insert(10);
             //tree2.insert(20);
 
-           // Console.WriteLine(tree.equals(tree2));
-            Console.WriteLine(tree.isValid());
+            // Console.WriteLine(tree.equals(tree2));
+            //Console.WriteLine(tree.isValid());
+            //var list = tree.GetNodesAtKth(2);
+
+            //foreach (var item in list)
+            //{
+            //    Console.WriteLine(item);
+            //}
             //tree.traverseInOrder();
             //Console.WriteLine("\n");
             //tree.traversePostOrder();
+            Console.WriteLine(tree.contains(8));
         }
         public static void testHashTable()
         {
