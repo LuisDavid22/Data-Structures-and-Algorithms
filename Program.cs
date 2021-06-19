@@ -28,7 +28,31 @@ namespace DataStructuresAndAlgorithms
             //CharFinder finder = new CharFinder();
             //Console.WriteLine(finder.firstRepeatedCharacter(text));
             //testHashTable();
-            testTree();
+            //testTree();
+            testAvlTree();
+        }
+        public static void testAvlTree()
+        {
+            AVLTree tree = new AVLTree();
+
+            //tree.insert(7);
+            //tree.insert(4);
+            //tree.insert(9);
+            //tree.insert(1);
+            //tree.insert(6);
+            //tree.insert(8);
+            //tree.insert(10);
+
+            tree.insert(1);
+            tree.insert(3);
+            tree.insert(2);
+            tree.insert(4);
+
+            //tree.insert(4);
+            //tree.insert(5);
+            //tree.insert(6);
+            //tree.insert(7);
+
         }
         public static void testTree()
         {
