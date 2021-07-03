@@ -21,7 +21,7 @@ namespace DataStructuresAndAlgorithms
 
             //testArrayQueue();
             //testStackQueue();
-            //testPriorityQueue();
+            //estPriorityQueue();
             //testQueueReverser();
 
             //string text = "a green apple";
@@ -29,7 +29,28 @@ namespace DataStructuresAndAlgorithms
             //Console.WriteLine(finder.firstRepeatedCharacter(text));
             //testHashTable();
             //testTree();
-            testAvlTree();
+            //testAvlTree();
+            testHeap();
+        }
+        public static void testHeap()
+        {
+            Heap heap = new Heap();
+            var numbers = new int[] { 5, 3, 8, 4, 1, 2, 10 };
+            //heap.heapify(numbers);
+            MaxHeap.heapify(numbers);
+
+            //heap.insert(24);
+            //heap.insert(15);
+            //heap.insert(9);
+            //heap.insert(12);
+            //heap.insert(10);
+            //heap.insert(3);
+            //heap.insert(4);
+            //heap.insert(1);
+            //heap.insert(8);
+
+            //heap.remove();
+
         }
         public static void testAvlTree()
         {
@@ -127,8 +148,10 @@ namespace DataStructuresAndAlgorithms
             //queue.enqueue(2);
             //queue.enqueue(4);
 
-                queue.add(5);
+            queue.add(10);
+            queue.add(5);
                 queue.add(3);
+               
 
             Console.WriteLine(queue.ToString());
             Console.WriteLine(queue.dequeue());

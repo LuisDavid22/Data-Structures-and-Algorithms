@@ -117,13 +117,7 @@ namespace DataStructuresAndAlgorithms.Data_Structures
             var newRoot = root.RightChild;
             root.RightChild = null;
 
-            if (newRoot.LeftChild != null)
-            {
-                if (newRoot.LeftChild.Value > root.Value)
-                    root.RightChild = newRoot.LeftChild;
-                else
-                    root.LeftChild = newRoot.LeftChild;
-            }
+            root.RightChild = newRoot.LeftChild;
 
             newRoot.LeftChild = root;
 
@@ -138,13 +132,7 @@ namespace DataStructuresAndAlgorithms.Data_Structures
             var newRoot = root.LeftChild;
             root.LeftChild = null;
 
-            if(newRoot.RightChild != null)
-            {
-                if (newRoot.RightChild.Value > root.Value)
-                    root.RightChild = newRoot.RightChild;
-                else
-                    root.LeftChild = newRoot.RightChild;
-            }
+            root.LeftChild = newRoot.RightChild;
 
             newRoot.RightChild = root;
 
