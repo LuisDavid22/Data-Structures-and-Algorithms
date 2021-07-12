@@ -30,7 +30,18 @@ namespace DataStructuresAndAlgorithms
             //testHashTable();
             //testTree();
             //testAvlTree();
-            testHeap();
+            //testHeap();
+            testTrie();
+        }
+        public static void testTrie()
+        {
+            Trie trie = new Trie();
+
+            trie.insert("boy");
+            trie.insert("book");
+
+            //Console.WriteLine( trie.contains("boyxc"));
+            trie.traverse();
         }
         public static void testHeap()
         {
