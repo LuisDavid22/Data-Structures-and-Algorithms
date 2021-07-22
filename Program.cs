@@ -31,7 +31,21 @@ namespace DataStructuresAndAlgorithms
             //testTree();
             //testAvlTree();
             //testHeap();
-            testTrie();
+            //testTrie();
+            testGraph();
+        }
+        public static void testGraph()
+        {
+            Graph graph = new Graph();
+
+            graph.addNode("Juan");
+            graph.addNode("Pedro");
+            graph.addNode("Jose");
+
+            graph.addEdge("Juan", "Jose");
+            graph.addEdge("Juan", "Pedro");
+
+            graph.removeEdge("Juan", "Pedro");
         }
         public static void testTrie()
         {
