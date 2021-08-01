@@ -32,8 +32,14 @@ namespace DataStructuresAndAlgorithms
             //testAvlTree();
             //testHeap();
             //testTrie();
-            testGraph();
+            //testGraph();
+            int[] array = new int[] { 2,4,1,8,3,4};
+            //Console.WriteLine(string.Join(',', BubbleSort.Sort(array)));
+            //SelectionSort.sort(array);
+            InsertionSort.sort(array);
+            Console.WriteLine(string.Join(',', array));
         }
+        
         public static void testGraph()
         {
             Graph graph = new Graph();
@@ -331,5 +337,6 @@ namespace DataStructuresAndAlgorithms
             //Console.WriteLine(string.Join(",",test));
             //Console.WriteLine(numbers.indexOf(30));
         }
+      
     }   
 }
