@@ -33,10 +33,10 @@ namespace DataStructuresAndAlgorithms
             //testHeap();
             //testTrie();
             //testGraph();
-            int[] array = new int[] { 2,4,1,8,3,4};
+            int[] array = new int[] { 5,3,2,5,4,4,5};
             //Console.WriteLine(string.Join(',', BubbleSort.Sort(array)));
             //SelectionSort.sort(array);
-            InsertionSort.sort(array);
+            CountingSort.sort(array);
             Console.WriteLine(string.Join(',', array));
         }
         
